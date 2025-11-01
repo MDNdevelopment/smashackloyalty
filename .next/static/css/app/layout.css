@@ -887,9 +887,6 @@ video {
 .text-\[1\.5em\] {
   font-size: 1.5em;
 }
-.text-\[2em\] {
-  font-size: 2em;
-}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1013,7 +1010,13 @@ video {
 
 body {
   color: #FF7C02;
-  background: var(--foreground);
+  background: linear-gradient(
+      0deg,
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0.513)
+    ),
+    url("/pattern.webp");
+  background-repeat: repeat;
 }
 
 .hover\:shadow-lg:hover {
@@ -1093,10 +1096,6 @@ body {
 
   .lg\:text-\[1\.9em\] {
     font-size: 1.9em;
-  }
-
-  .lg\:text-\[2\.5em\] {
-    font-size: 2.5em;
   }
 
   .lg\:text-\[2em\] {

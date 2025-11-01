@@ -11,11 +11,7 @@ export default function Home() {
   }
   return (
     <main className="text-center">
-      <h1 className=" text-[2em] lg:text-[2.5em] font-bold text-primary-600 text-center mt-10">
-        {cardData.business}
-      </h1>
-
-      <h2 className="text-[1.5em] lg:w-full w-4/5 mx-auto lg:text-[1.9em] font-bold text-secondary mb-10">
+      <h2 className="pt-10 text-[1.5em] lg:w-full w-4/5 mx-auto lg:text-[1.9em] font-bold text-secondary mb-10">
         {cardData.description}
       </h2>
 
