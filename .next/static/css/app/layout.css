@@ -1015,8 +1015,7 @@ body {
       rgb(255, 255, 255),
       rgba(255, 255, 255, 0.513)
     ),
-    url("/pattern.webp");
-  background-repeat: repeat;
+    
 }
 
 .hover\:shadow-lg:hover {
