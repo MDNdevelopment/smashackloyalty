@@ -1010,12 +1010,6 @@ video {
 
 body {
   color: #FF7C02;
-  background: linear-gradient(
-      0deg,
-      rgb(255, 255, 255),
-      rgba(255, 255, 255, 0.513)
-    ),
-    
 }
 
 .hover\:shadow-lg:hover {
