@@ -2,6 +2,7 @@ export default function ConfirmationModal({
   name,
   email,
   phone,
+  location,
   setShowModal,
   setIsLoading,
   enrollProcess,
@@ -63,7 +64,7 @@ export default function ConfirmationModal({
                 onClick={() => {
                   setIsLoading(true);
                   setShowModal(false);
-                  enrollProcess({ name, email, phone });
+                  enrollProcess({ name, email, phone, location });
                 }}
               >
                 Sí, son correctos

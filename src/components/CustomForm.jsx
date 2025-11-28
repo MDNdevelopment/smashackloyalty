@@ -35,9 +35,10 @@ export default function CustomForm() {
         Nombre: data.name,
         "Número telefónico": data.phone,
         "Correo electrónico": data.email,
+        Ubicacion: data.location,
       },
     };
-    console.log(payload);
+
     const check = await checkUser(payload);
     if (check.userExists || !check.ok) {
       setIsLoading(false);
@@ -60,7 +61,6 @@ export default function CustomForm() {
       cardLink: enroll.url,
     });
 
-    console.log({ add });
     if (!add) {
       const cardURL = `https://q.passkit.net/~/#/p/${enroll.pid}`;
       window.location.replace(cardURL);
@@ -87,6 +87,7 @@ export default function CustomForm() {
             name={watch("name")}
             email={watch("email")}
             phone={watch("phone")}
+            location={watch("location")}
           />
         </>
       ) : null}
@@ -196,6 +197,44 @@ export default function CustomForm() {
           />
           {errors.email && (
             <p className="text-red-600">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div className="my-5 ">
+          <label
+            className="form-label block mb-2 text-md font-medium text-gray-900 dark:text-black text-left"
+            htmlFor="ubicacion"
+          >
+            Ubicación de registro:
+          </label>
+
+          <select
+            {...register("location", {
+              required: {
+                value: true,
+                message: "Por favor selecciona una ubicación.",
+              },
+              minLength: {
+                value: 4,
+                message: "la ubicaciond ebe tener 4 caracteres",
+              },
+            })}
+            className="form-input border-2 rounded-md py-1 px-2 w-full text-zinc-800"
+          >
+            <option value="">Selecciona una ubicación</option>
+            <option key="bella_vista" value="Maracaibo - Bella vista">
+              Maracaibo - Bella vista
+            </option>
+            <option key="sambil" value="Maracaibo - Sambil">
+              Maracaibo - Sambil
+            </option>
+            <option key="vinedo" value="Valencia - El Viñedo">
+              Valencia - El Viñedo
+            </option>
+          </select>
+
+          {errors.location && (
+            <p className="text-red-600">{errors.location.message}</p>
           )}
         </div>
 
