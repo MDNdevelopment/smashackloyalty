@@ -219,7 +219,7 @@ export default function CustomForm() {
                 message: "la ubicaciond ebe tener 4 caracteres",
               },
             })}
-            className="form-input border-2 rounded-md py-1 px-2 w-full text-zinc-800"
+            className="bg-white form-input border-2 rounded-md py-1 px-2 w-full text-zinc-800"
           >
             <option value="">Selecciona una ubicación</option>
             <option key="bella_vista" value="Maracaibo - Bella vista">
